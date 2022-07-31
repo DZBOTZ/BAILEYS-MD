@@ -13,6 +13,7 @@ lolkey = 'Apikey1'
 //━━━━━━━━━━━━━━━[ SETTINGS ]━━━━━━━━━━━━━━━━━//
 global.owner = ['18254857668','6282324344519']
 global.premium = ['18254857668']
+global.ownername = 'DZ STORE'
 global.packname = 'Afabotz-MD'
 global.author = 'WhatsApp Bot'
 global.sessionName = 'hisoka'
