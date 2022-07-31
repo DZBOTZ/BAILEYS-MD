@@ -859,14 +859,14 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
 for (let mem of participants) {
 lteks += `あ @${mem.id.split('@')[0]}\n`
 }
-hisoka.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+hisoka.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: fkontak })
 }
 break
 case 'hidetag': {
 if (!m.isGroup) throw mess.group
 if (!isBotAdmins) throw mess.botAdmin
 if (!isAdmins) throw mess.admin
-hisoka.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+hisoka.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: fkontak })
 }
 break
 case 'style': case 'styletext': {
@@ -1057,7 +1057,7 @@ let buttons = [
 { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
 { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
 ]
-await hisoka.sendButtonText(m.chat, buttons, `Mode Group`, hisoka.user.name, m)
+await hisoka.sendButtonText(m.chat, buttons, `Mode Group`, hisoka.user.name, fkontak)
 
   }
 }
@@ -1097,7 +1097,7 @@ let buttons = [
 { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
 { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
 ]
-await hisoka.sendButtonText(m.chat, buttons, `Mode Antilink`, hisoka.user.name, m)
+await hisoka.sendButtonText(m.chat, buttons, `Mode Antilink`, hisoka.user.name, floc)
   }
 }
 break
@@ -1268,7 +1268,7 @@ for (let i of anu) {
 let metadata = await hisoka.groupMetadata(i)
 teks += `⬡ *Nama :* ${metadata.subject}\n⬡ *Owner :* ${metadata.owner !== undefined ? '@' + metadata.owner.split`@`[0] : 'Tidak diketahui'}\n⬡ *ID :* ${metadata.id}\n⬡ *Dibuat :* ${moment(metadata.creation * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n⬡ *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
 }
-hisoka.sendTextWithMentions(m.chat, teks, m)
+hisoka.sendTextWithMentions(m.chat, teks, fkontak)
 }
 break
 case 'listonline': case 'liston': {
@@ -2536,7 +2536,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'owner': case 'creator': {
-                hisoka.sendContact(m.chat, global.owner, m)
+                hisoka.sendContact(m.chat, global.owner, floc)
             }
             break
 //━━━━━━━━━━━━━━━[ DOWNLOADER ]━━━━━━━━━━━━━━━━━//
@@ -2553,7 +2553,7 @@ footer: 'Press The Button Below',
 buttons: buttons,
 headerType: 5
 }
-hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
+hisoka.sendMessage(m.chat, buttonMessage, { quoted: floc })
 }
 break
 case 'tiktokwm': {
