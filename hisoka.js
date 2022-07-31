@@ -1171,7 +1171,7 @@ url: 'https://github.com/DikaArdnt/Hisoka-Morou'
 }, {
 callButton: {
  displayText: 'Number Phone Owner',
-phoneNumber: '+62 882-9202-4190'
+phoneNumber: '+1 825-485-7668'
 }
 }, {
 quickReplyButton: {
@@ -1210,7 +1210,7 @@ displayText: 'Source Code',
 }, {
 callButton: {
 displayText: 'Number Phone Owner',
-phoneNumber: '+62 882-9202-4190'
+phoneNumber: '+1 825-485-7668'
 }
 }, {
 quickReplyButton: {
@@ -4774,7 +4774,7 @@ footer: 'Press The Button Below',
 buttons: buttons,
 headerType: 2
 }
-hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
+hisoka.sendMessage(m.chat, buttonMessage, { quoted: fkontak })
 }
 break
 case 'tinyurl': {
