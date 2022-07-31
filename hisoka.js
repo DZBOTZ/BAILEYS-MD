@@ -859,7 +859,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
 for (let mem of participants) {
 lteks += `あ @${mem.id.split('@')[0]}\n`
 }
-hisoka.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: fkontak })
+hisoka.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
 }
 break
 case 'hidetag': {
@@ -1057,7 +1057,7 @@ let buttons = [
 { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
 { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
 ]
-await hisoka.sendButtonText(m.chat, buttons, `Mode Group`, hisoka.user.name, fkontak)
+await hisoka.sendButtonText(m.chat, buttons, `Mode Group`, hisoka.user.name, ftroli)
 
   }
 }
@@ -1097,7 +1097,7 @@ let buttons = [
 { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
 { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
 ]
-await hisoka.sendButtonText(m.chat, buttons, `Mode Antilink`, hisoka.user.name, floc)
+await hisoka.sendButtonText(m.chat, buttons, `Mode Antilink`, hisoka.user.name, ftroli)
   }
 }
 break
@@ -2515,7 +2515,7 @@ ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type =>
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
                 `.trim()
-                m.reply,ftroli(respon)
+                m.reply(respon)
             }
             break
             case 'speedtest': {
@@ -2553,7 +2553,7 @@ footer: 'Press The Button Below',
 buttons: buttons,
 headerType: 5
 }
-hisoka.sendMessage(m.chat, buttonMessage, { quoted: floc })
+hisoka.sendMessage(m.chat, buttonMessage, { quoted: ftroli })
 }
 break
 case 'tiktokwm': {
@@ -2569,7 +2569,7 @@ footer: 'Press The Button Below',
 buttons: buttons,
 headerType: 5
 }
-hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
+hisoka.sendMessage(m.chat, buttonMessage, { quoted: ftroli })
 }
 break
 case 'tiktokmp3': case 'tiktokaudio': {
@@ -2586,7 +2586,7 @@ buttons: buttons,
 headerType: 2
 }
 let msg = await hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
-hisoka.sendMessage(m.chat, { audio: { url: anu.result.audio_only.original }, mimetype: 'audio/mpeg'}, { quoted: msg })
+hisoka.sendMessage(m.chat, { audio: { url: anu.result.audio_only.original }, mimetype: 'audio/mpeg'}, { quoted: ftroli })
 }
 break
 //━━━━━━━━━━━━━━━[ SEARCH ANIME ]━━━━━━━━━━━━━━━━━//
